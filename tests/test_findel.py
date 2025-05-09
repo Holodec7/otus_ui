@@ -138,7 +138,3 @@ def test_change_currency_in_catalog(browser, base_url):
     price = wait.until(
         EC.visibility_of_element_located((By.XPATH, '//div[@id="product-list"]/div[1]//div[@class="price"]')))
     price = price.text
-    if '€' in price:
-        print("Price is in EURO: ", price)
-    else:
-        print("Price is NOT in USD: ", price)
